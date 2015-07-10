@@ -1,4 +1,4 @@
-<#assign cxt="/myclient/">
+<#assign cxt="/cmsfront/">
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,7 +18,7 @@
 <div id="top"><a class="top">Page Top</a></div>
 
 <div id="header">
-  <h1><a href="index.html"><img src="${cxt}static/images/logo.png" title="Fong Kee International Machinery Co., Ltd."></a></h1>
+  <h1><a href="index.html"><img src="${cxt}static/images/logo1.png" title="Fong Kee International Machinery Co., Ltd."></a></h1>
   <!-- nav -->
   <ul id="nav">
     <li class="tw"><a href="tw/index.html">中文版dddd</a></li>

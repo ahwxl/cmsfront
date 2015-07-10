@@ -22,14 +22,14 @@
       </ul>
     </li>
     <li><a href="Download.html">Downloads</a></li>
-    <li><a href="news.html">NEWS</a>
+    <li><a href="${cxt}contentlist/aaa.htm">NEWS</a>
      <ul>
-        <li><a href="news.html">Latest News</a></li>
-        <li class="last"><a href="newsExpo.html">Exhibition News</a></li>
+        <li><a href="${cxt}contentdetail/a1d4eb69d57d42378b0d325df7a4e247.htm">Latest News</a></li>
+        <li class="last"><a href="${cxt}contentdetail/a1d4eb69d57d42378b0d325df7a4e247.htm">Exhibition News</a></li>
       </ul>
     </li>
-    <li><a href="FAQ.html">FAQ</a></li>
-    <li><a href="inquiryForm.html">Contact Us</a></li>
-    <!--<li><a href="inquiryList.html">Inquiry Cart</a></li>-->
+    <li><a href="${cxt}contentdetail/a1d4eb69d57d42378b0d325df7a4e247.htm">FAQ1</a></li>
+    <li><a href="${cxt}prodlist/inquiryForm.htm">Contact Us</a></li>
+    <!--<li><a href="inquiryList.htm">Inquiry Cart</a></li>-->
   </ul>
 </div>

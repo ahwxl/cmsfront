@@ -41,5 +41,27 @@ public class NewCmsControler {
 		
 		return "cms/productdetail";
 	}
+	
+	
+	@RequestMapping(value = "/contentlist/{catalogId}.htm", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
+	public String contentList(@PathVariable("catalogId") String catalogId,Map<String, Object> model,
+			HttpServletRequest request, HttpServletResponse respose){
+		log.info("请求参数是：{}", catalogId);
+		
+		model.put("catalogId", catalogId);
+		
+		return "cms/contentlist";
+	}
+	
+	
+	@RequestMapping(value = "/contentdetail/{contentId}.htm", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
+	public String contentDetail(@PathVariable("contentId") String contentId,Map<String, Object> model,
+			HttpServletRequest request, HttpServletResponse respose){
+		log.info("请求参数是：{}", contentId);
+		
+		model.put("id", contentId);
+		
+		return "cms/contentpage";
+	}
 
 }

@@ -127,6 +127,8 @@
 		<property name="freemarkerVariables">
 			<map>
 				<entry key="product_list" value-ref="productListDirective" />
+				<entry key="content_list" value-ref="contentListDirective" />
+				<entry key="content_detail" value-ref="contentDetailDirective" />
 			</map>
 		</property>
 		<property name="templateLoaderPath" value="/WEB-INF/view/" />

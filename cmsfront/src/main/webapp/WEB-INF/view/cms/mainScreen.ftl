@@ -8,7 +8,7 @@
 <!-- banner -->
 <div id="banner">
   <ul class="slides_container">
-    <li><a href="productList0d87.html?no=8" id=HBA><img src="static/images/banner/HBA.jpg" width="960" height="400" title="HBA Series"></a></li>
+    <li><a href="productList0d87.html?no=8" id=HBA><img src="static/images/banner/first1.jpg" width="960" height="400" title="HBA Series"></a></li>
     <li><a href="productList775e.html?no=11" id=Lamination><img src="static/images/banner/LA.jpg" width="960" height="400" title="Lamination"></a></li>
     <li><a href="productList0b76.html?no=10" id=Cast><img src="static/images/banner/TDie.jpg" width="960" height="400" title="Cast Film Machine"></a></li>
     <li><a href="productList5969.html?no=1" id=ABI><img src="static/images/banner/ABI.jpg" width="960" height="400" title="ABI Series"></a></li>
