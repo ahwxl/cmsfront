@@ -2,9 +2,12 @@ package com.bplow.netconn.newcms.dao.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.bplow.netconn.newcms.dao.CatalogDao;
 import com.bplow.netconn.newcms.domain.FmCatalog;
 
+@Service
 public class CatalogDaoImpl implements CatalogDao{
 
 	@Override
