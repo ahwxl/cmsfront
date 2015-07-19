@@ -13,6 +13,19 @@
     - When the media type is 'text/html', it will delegate to the InternalResourceViewResolver's JstlView, 
     - otherwise to the BeanNameViewResolver.
     -->
+    
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 对所有的请求拦截使用/** ,对某个模块下的请求拦截使用：/myPath/* -->
+            <mvc:mapping path="/**" />
+            <ref bean="userAccessInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+ 
+    <bean id="userAccessInterceptor"
+        class="com.bplow.netconn.newcms.intercaptor.RequestStatisIntercaptor">
+    </bean>
 
 	<!-- <mvc:view-resolvers>
 		<mvc:content-negotiation>
@@ -126,9 +139,10 @@
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<property name="freemarkerVariables">
 			<map>
-				<entry key="product_list" value-ref="productListDirective" />
-				<entry key="content_list" value-ref="contentListDirective" />
+				<entry key="product_list"   value-ref="productListDirective" />
+				<entry key="content_list"   value-ref="contentListDirective" />
 				<entry key="content_detail" value-ref="contentDetailDirective" />
+				<entry key="catalog_list"   value-ref="catalogNavigationDirective" />
 			</map>
 		</property>
 		<property name="templateLoaderPath" value="/WEB-INF/view/" />

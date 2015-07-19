@@ -39,6 +39,7 @@ public class NewCmsControler {
 	public String productList(@PathVariable("catalogId") String catalogId,Map<String, Object> model,
 			HttpServletRequest request, HttpServletResponse respose){
 		log.info("请求参数是：{}",catalogId); 
+		model.put("catalogId", catalogId);
 		
 		return "cms/productlist";
 	}

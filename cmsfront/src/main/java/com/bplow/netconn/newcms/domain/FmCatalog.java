@@ -3,6 +3,7 @@ package com.bplow.netconn.newcms.domain;
 // Generated 2015-7-5 19:49:47 by Hibernate Tools 4.0.0
 
 import java.util.Date;
+import java.util.Set;
 
 /**
  * 目录类型有产品or文章
@@ -25,6 +26,14 @@ public class FmCatalog implements java.io.Serializable {
 	private Character isDeleteFlag;
 	private String catalogType;
 	private String parentCatalogId;
+	
+	private Set childrenNode;
+	
+	//-------------父节点信息
+	private String pCatalogId;
+	private String pCatalogName;
+	private int    pOderId;
+	private String ppCatalogId;
 
 	public FmCatalog() {
 	}
@@ -123,6 +132,46 @@ public class FmCatalog implements java.io.Serializable {
 
 	public void setParentCatalogId(String parentCatalogId) {
 		this.parentCatalogId = parentCatalogId;
+	}
+	
+	public String getpCatalogId() {
+		return pCatalogId;
+	}
+
+	public void setpCatalogId(String pCatalogId) {
+		this.pCatalogId = pCatalogId;
+	}
+
+	public String getpCatalogName() {
+		return pCatalogName;
+	}
+
+	public void setpCatalogName(String pCatalogName) {
+		this.pCatalogName = pCatalogName;
+	}
+
+	public int getpOderId() {
+		return pOderId;
+	}
+
+	public void setpOderId(int pOderId) {
+		this.pOderId = pOderId;
+	}
+	
+	public String getPpCatalogId() {
+		return ppCatalogId;
+	}
+
+	public void setPpCatalogId(String ppCatalogId) {
+		this.ppCatalogId = ppCatalogId;
+	}
+	
+	public Set getChildrenNode() {
+		return childrenNode;
+	}
+
+	public void setChildrenNode(Set childrenNode) {
+		this.childrenNode = childrenNode;
 	}
 
 	public boolean equals(Object other) {
