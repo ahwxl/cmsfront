@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import com.bplow.netconn.base.dao.result.Result;
 import com.bplow.netconn.newcms.dao.CatalogDao;
 import com.bplow.netconn.newcms.dao.ContentDao;
 import com.bplow.netconn.newcms.dao.ContentJdbcDao;
@@ -69,9 +70,11 @@ public class CmsServiceImpl implements CmsService{
 	}
 
 	@Override
-	public String getContentById(String cntId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Result getContentById(String cntId) {
+		Result rst = new  Result(); 
+		FmContent cnt = contentJdbcDao.getContentById(cntId);
+		rst.setResultObj(cnt);
+		return rst;
 	}
 
 	@Override

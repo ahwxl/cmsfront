@@ -2,7 +2,9 @@ package com.bplow.netconn.newcms.service;
 
 import java.util.List;
 
+import com.bplow.netconn.base.dao.result.Result;
 import com.bplow.netconn.newcms.domain.FmCatalog;
+import com.bplow.netconn.newcms.domain.FmContent;
 
 public interface CmsService {
 	
@@ -26,7 +28,7 @@ public interface CmsService {
 	 * @param cntId
 	 * @return
 	 */
-	public String getContentById(String cntId);
+	public Result getContentById(String cntId);
 	
 	/**
 	 * 获取文章列表

@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bplow.netconn.base.dao.result.Result;
 import com.bplow.netconn.newcms.dao.ContentJdbcDao;
 import com.bplow.netconn.newcms.domain.FmContent;
+import com.bplow.netconn.newcms.service.CmsService;
 
 import freemarker.core.Environment;
 import freemarker.ext.beans.StringModel;
@@ -33,7 +35,7 @@ public class ContentDetailDirective implements TemplateDirectiveModel{
     private static Logger logger = LoggerFactory.getLogger(ContentListDirective.class);
 	
 	@Autowired
-	private ContentJdbcDao contentJdbcDao;
+	private CmsService cmsService;
 	
 	
 	@Override
@@ -46,9 +48,14 @@ public class ContentDetailDirective implements TemplateDirectiveModel{
 			SimpleScalar ss = ((SimpleScalar) templatemodel);
 			id = ss.getAsString();
 		}
-		FmContent cnt = contentJdbcDao.getContentById(id);
-		
-		pagecontent = IOUtils.toString(cnt.getContent(),"GBK");
+		FmContent cnt = null;
+		Result rst = cmsService.getContentById(id);
+		if(rst.isSuccess){
+			cnt = (FmContent)rst.getResultObj();
+			pagecontent = IOUtils.toString(cnt.getContent(),"GBK");
+		}else{
+			pagecontent ="没有内容展示";
+		}
 		
 		env.setVariable("content", ObjectWrapper.DEFAULT_WRAPPER.wrap(cnt));
 		

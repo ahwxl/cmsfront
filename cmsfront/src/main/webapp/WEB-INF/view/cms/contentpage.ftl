@@ -8,7 +8,7 @@
 <!-- content -->
 
 <div id="content">
-  <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="news.html">NEWS</a> &gt; Come to visit our booth for ChinaPlas!!!</div>
+  <div id="trace"><a href="">Home</a> &gt; <a href="news.html">NEWS</a> &gt; Come to visit our booth for ChinaPlas!!!</div>
   <p>&nbsp;</p>
   <h1>NEWS</h1>
   <p>&nbsp;</p>
