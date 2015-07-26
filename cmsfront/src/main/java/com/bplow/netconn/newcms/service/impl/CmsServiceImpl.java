@@ -15,8 +15,10 @@ import com.bplow.netconn.base.dao.result.Result;
 import com.bplow.netconn.newcms.dao.CatalogDao;
 import com.bplow.netconn.newcms.dao.ContentDao;
 import com.bplow.netconn.newcms.dao.ContentJdbcDao;
+import com.bplow.netconn.newcms.dao.ProductDao;
 import com.bplow.netconn.newcms.domain.FmCatalog;
 import com.bplow.netconn.newcms.domain.FmContent;
+import com.bplow.netconn.newcms.domain.FmProduct;
 import com.bplow.netconn.newcms.service.CmsService;
 
 @Service
@@ -28,6 +30,8 @@ public class CmsServiceImpl implements CmsService{
 	ContentDao contentDao;
 	@Autowired
 	ContentJdbcDao contentJdbcDao;
+	@Autowired
+	ProductDao productDao;
 	
 	public List getCatalogList(String pcatalogId){
 		
@@ -89,6 +93,14 @@ public class CmsServiceImpl implements CmsService{
 	public FmCatalog getCatalogById(String id) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Result getProductById(String id) {
+		Result rst = new Result();
+		FmProduct product = productDao.queryById(id);
+		rst.setResultObj(product);
+		return rst;
 	}
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import com.bplow.netconn.base.dao.result.Result;
 import com.bplow.netconn.newcms.domain.FmCatalog;
 import com.bplow.netconn.newcms.domain.FmContent;
+import com.bplow.netconn.newcms.domain.FmProduct;
 
 public interface CmsService {
 	
@@ -44,6 +45,12 @@ public interface CmsService {
 	 */
 	public FmCatalog getCatalogById(String id);
 	
+	/**
+	 * 获取产品
+	 * @param id
+	 * @return
+	 */
+	public Result getProductById(String id);
 	
 	
 

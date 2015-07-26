@@ -140,6 +140,7 @@
 		<property name="freemarkerVariables">
 			<map>
 				<entry key="product_list"   value-ref="productListDirective" />
+				<entry key="product_detail" value-ref="productDetailDirective" />
 				<entry key="content_list"   value-ref="contentListDirective" />
 				<entry key="content_detail" value-ref="contentDetailDirective" />
 				<entry key="catalog_list"   value-ref="catalogNavigationDirective" />

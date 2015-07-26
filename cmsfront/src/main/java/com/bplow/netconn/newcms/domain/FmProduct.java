@@ -18,6 +18,7 @@ public class FmProduct implements java.io.Serializable {
 	private String catalogId;
 	private String productDesc;
 	private String productImageUrl;
+	private byte[] content;
 	private Character isShow;
 	private Integer orderId;
 	private Date gmtCreate;
@@ -110,6 +111,13 @@ public class FmProduct implements java.io.Serializable {
 
 	public void setGmtModify(Date gmtModify) {
 		this.gmtModify = gmtModify;
+	}
+	public byte[] getContent() {
+		return content;
+	}
+
+	public void setContent(byte[] content) {
+		this.content = content;
 	}
 
 	public boolean equals(Object other) {

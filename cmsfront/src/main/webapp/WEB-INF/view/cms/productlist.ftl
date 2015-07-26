@@ -18,8 +18,8 @@
 <#list productlist as product>
     <form name="thisform" id="thisform" method="post" action="productList.asp">
     <li>
-      <div class="nailthumb-container thumb" style="overflow: hidden; padding: 0px; width: 290px; height: 290px;"><a href="${cxt}productdetail/hao_1.htm" title="Continuous Extrusion Blow Moulding Machine"><img alt="Continuous Extrusion Blow Moulding Machine" src="${cxt}${product.productImageUrl}" style="position: relative; width: 442.073170731707px; height: 290px; top: 0px; left: -76.0365853658537px;" class="nailthumb-image"></a></div>
-      <p><a href="${cxt}productdetail/${product.id}.htm">${product.productDesc}</a></p>
+      <div class="nailthumb-container thumb" style="overflow: hidden; padding: 0px; width: 290px; height: 290px;"><a href="${cxt}productdetail/${product.id}_0.htm" title="Continuous Extrusion Blow Moulding Machine"><img alt="Continuous Extrusion Blow Moulding Machine" src="${cxt}${product.productImageUrl}" style="position: relative; width: 442.073170731707px; height: 290px; top: 0px; left: -76.0365853658537px;" class="nailthumb-image"></a></div>
+      <p><a href="${cxt}productdetail/${product.id}_0.htm">${product.productDesc}</a></p>
       
     </li>
     <input type="hidden" name="pid" value="4">
