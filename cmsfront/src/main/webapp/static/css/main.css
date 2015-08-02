@@ -153,7 +153,7 @@ ol.number {
 	width: 960px;
 	height: 40px;
 	margin: 0 auto;
-	background: #333;
+	background: #f2b144;
 	-webkit-border-radius: 5px 5px 0 0;
 }
 #menu ul li {
@@ -263,7 +263,7 @@ dl.mainBox dd {
 	padding: 0 15px;
 	width: auto;
 	height: 30px;
-	background: #36BDEA;
+	background: #06b5fe;
 	color: #FFF;
 	-webkit-border-radius: 5px;
 }

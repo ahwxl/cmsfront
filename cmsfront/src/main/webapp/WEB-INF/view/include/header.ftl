@@ -18,11 +18,11 @@
 <div id="top"><a class="top">Page Top</a></div>
 
 <div id="header">
-  <h1><a href="index.html"><img src="${cxt}static/images/logo1.png" title="Fong Kee International Machinery Co., Ltd."></a></h1>
+  <h1><a href="#"><img src="${cxt}static/images/logo1.png" title="Fong Kee International Machinery Co., Ltd."></a></h1>
   <!-- nav -->
   <ul id="nav">
-    <li class="tw"><a href="tw/index.html">中文版dddd</a></li>
-    <li class="en"><a href="index.html">English</a></li>
+    <li class="tw"><a href="#">中文版</a></li>
+    <li class="en"><a href="#">Englis</a></li>
   </ul>
   <!-- nav end-->
   <!-- search -->
