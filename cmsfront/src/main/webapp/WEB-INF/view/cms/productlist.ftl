@@ -8,13 +8,13 @@
 <!-- content -->
 
 <div id="content">
-  <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="product.html">Products</a> &gt; HBA Series</div>
+  <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="product.html"></a> &gt; </div>
   <p>&nbsp;</p>
-  <h1>HBA Series</h1>
+  <h1></h1>
   <p>&nbsp;</p>
   <ul id="product">
 
-<@product_list catalogId=catalogId>	
+<@product_list catalogId=catalogId>
 <#list productlist as product>
     <form name="thisform" id="thisform" method="post" action="productList.asp">
     <li>
