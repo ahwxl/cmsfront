@@ -5,9 +5,9 @@
 <@catalog_list catalogId="44209a93d0ca46e7b2643cfceb6c9e5e">
 <#if cataloglist??>
 <#list cataloglist as navcatalog>
-<#if navcatalog.catalogType == "1">
+<#if navcatalog.catalogType = "1">
 <li><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
-<#elseif navcatalog.catalogType == "2">
+<#elseif navcatalog.catalogType = "2">
 <li><a href="${cxt}contentlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
 <#else>
 <li><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
@@ -16,7 +16,13 @@
 <#if navcatalog.childrenNode??>
 <ul>
 <#list navcatalog.childrenNode as chdcatalog>
-   <li><a href="${cxt}contentlist/${chdcatalog.catalogId}.htm">${chdcatalog.catalogName}</a></li>
+<#if navcatalog.catalogType == "1">
+   <li><a href="${cxt}prodlist/${chdcatalog.catalogId}.htm">${chdcatalog.catalogName}</a></li>
+<#elseif navcatalog.catalogType == "2">
+<li><a href="${cxt}contentlist/${chdcatalog.catalogId}.htm">${chdcatalog.catalogName}</a></li>
+<#else>
+<li><a href="${cxt}prodlist/${chdcatalog.catalogId}.htm">${chdcatalog.catalogName}</a></li>
+</#if>
 </#list>
 </#if>
 </ul>

@@ -21,8 +21,8 @@
   <h1><a href="#"><img src="${cxt}static/images/logo1.png" title="Fong Kee International Machinery Co., Ltd."></a></h1>
   <!-- nav -->
   <ul id="nav">
-    <li class="tw"><a href="#">中文版</a></li>
-    <li class="en"><a href="#">Englis</a></li>
+    <li class="CN"><a href="#">中文CN</a></li>
+    <li class="EN"><a href="#">英文EN</a></li>
   </ul>
   <!-- nav end-->
   <!-- search -->
