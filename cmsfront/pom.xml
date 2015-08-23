@@ -322,7 +322,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<warName>myclient</warName>
+					<warName>cmsfront</warName>
 				</configuration>
 			</plugin>
 			<plugin>

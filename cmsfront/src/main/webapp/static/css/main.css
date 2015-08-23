@@ -108,8 +108,8 @@ ol.number {
 	display: block;
 	text-decoration: none;
 }
-#nav li.tw {
-	background: url(../images/tw.jpg) no-repeat left center;
+#nav li.cn {
+	background: url(../images/chiness.png) no-repeat left center;
 }
 #nav li.en {
 	background: url(../images/en.jpg) no-repeat left center;
@@ -153,12 +153,12 @@ ol.number {
 	width: 960px;
 	height: 40px;
 	margin: 0 auto;
-	background: #f2b144;
+	background: #42d7ff;
 	-webkit-border-radius: 5px 5px 0 0;
 }
 #menu ul li {
 	float: left;
-	border-right: 1px solid #000;
+	border-right: 1px solid #ffffff;
 	position: relative;
 	z-index: 999;
 }
@@ -174,7 +174,7 @@ ol.number {
 	text-decoration: none;
 }
 #menu ul li a:hover, #menu ul li.selected a, #menu ul li.HoverClass a {
-	background: #09c;
+	background: #0cb8e5;/*09c*/
 }
 #menu ul li ul {
 	position: absolute;
@@ -187,7 +187,7 @@ ol.number {
 	margin-left: 0;
 }
 #menu ul li ul li a {
-	background:#09c;
+	background:#0cb8e5;/*#09c*/
 	line-height:35px;
 	height:35px;
 	width:170px;
@@ -830,11 +830,17 @@ dl.mainBox dd {
 	border-top: 5px solid #eee;
 	line-height: 160%;
 }
+#footer_cnt{
+	position: relative;
+	width:100%;
+	text-align:center;
+}
 #footer a {
 	color: #999;
 }
 #chAddress {
-	position: absolute;
+	position: relative;
+	vertical-align:middle;
 	left: 0;
 	top: 20PX;
 }

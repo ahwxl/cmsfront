@@ -25,6 +25,8 @@ public class ProductJdbcDaoImpl implements ProductDao{
 	
 	private String queryProductlistsql ="select a.product_id,a.product_name,a.product_desc,a.product_image_url from fm_product a ";
 	
+	private String queryProdListForTwoLevel = "select a.product_id,a.product_name,a.product_desc,a.product_image_url from ( select cg.catalog_id from fm_catalog cg where cg.catalog_id = ? union all select gl.catalog_id from fm_catalog gl where gl.parent_catalog_id = ? ) ctl left join fm_product a  on ctl.catalog_id = a.catalog_id where a.product_id is not null ";
+	
 	private String queryProductById = "select a.product_id,a.product_name,a.content from fm_product a where a.product_id = ? ";
 	
 	@Override
@@ -44,7 +46,7 @@ public class ProductJdbcDaoImpl implements ProductDao{
 	public List<FmProduct> queryList(FmProduct product) {
 		
 		
-		return jdbcTemplate.query(queryProductlistsql, new RowMapper<FmProduct>() {
+		return jdbcTemplate.query(queryProdListForTwoLevel, new RowMapper<FmProduct>() {
             public FmProduct mapRow(ResultSet rs, int rowNum) throws SQLException {
             	FmProduct cnt = new FmProduct();
             	cnt.setId(rs.getLong("product_id"));
@@ -54,7 +56,7 @@ public class ProductJdbcDaoImpl implements ProductDao{
 
                 return cnt;
             }
-        });
+        },product.getCatalogId(),product.getCatalogId());
 	}
 
 }

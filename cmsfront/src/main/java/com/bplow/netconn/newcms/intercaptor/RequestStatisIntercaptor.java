@@ -19,7 +19,19 @@ public class RequestStatisIntercaptor extends HandlerInterceptorAdapter{
 
 	public boolean preHandle(HttpServletRequest request,
             HttpServletResponse response, Object handler) throws Exception {
-		log.info("用户权限判读：@AccessRequired");
+		//log.info("用户权限判读：@AccessRequired");
+		//获取请求的URL判读是否是 en.techwellglobal.com 如果是则展示英文站点
+		StringBuffer url = request.getRequestURL();
+		url.delete(0, 6);//删除http://
+		String tempContextUrl = url.delete(url.length() - request.getRequestURI().length(), url.length()).toString();
+		if(tempContextUrl.contains("en.")){//展示英文站点
+			request.setAttribute("webCatalogId", "8380c59932414743af80f8e3ec03c9da");
+			request.setAttribute("isEnglist", true);
+		}else{//展示中文站点
+			request.setAttribute("isEnglist", false);
+			request.setAttribute("webCatalogId", "44209a93d0ca46e7b2643cfceb6c9e5e");
+		}
+		
 		if(handler instanceof ResourceHttpRequestHandler){
 			return true;
 		}else if(handler instanceof HandlerMethod){

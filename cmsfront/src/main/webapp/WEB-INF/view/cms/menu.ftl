@@ -2,7 +2,7 @@
   <ul>
     <li class="selected"><a href="${cxt}mainScreen"><img src="${cxt}static/images/home.gif" align="absmiddle"></a></li>
     
-<@catalog_list catalogId="44209a93d0ca46e7b2643cfceb6c9e5e">
+<@catalog_list catalogId=webCatalogId>
 <#if cataloglist??>
 <#list cataloglist as navcatalog>
 <#if navcatalog.catalogType = "1">

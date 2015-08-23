@@ -8,7 +8,7 @@
 <!-- content -->
 
 <div id="content">
-  <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="product.html"></a> &gt; </div>
+<!-- <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="product.html"></a> &gt; </div>-->
   <p>&nbsp;</p>
   <h1></h1>
   <p>&nbsp;</p>
@@ -18,7 +18,7 @@
 <#list productlist as product>
     <form name="thisform" id="thisform" method="post" action="productList.asp">
     <li>
-      <div class="nailthumb-container thumb" style="overflow: hidden; padding: 0px; width: 290px; height: 290px;"><a href="${cxt}productdetail/${product.id}_0.htm" title="Continuous Extrusion Blow Moulding Machine"><img alt="Continuous Extrusion Blow Moulding Machine" src="${cxt}${product.productImageUrl}" style="position: relative; width: 442.073170731707px; height: 290px; top: 0px; left: -76.0365853658537px;" class="nailthumb-image"></a></div>
+      <div class="nailthumb-container thumb" style="overflow: hidden; padding: 0px; width: 290px; height: 290px;"><a href="${cxt}productdetail/${product.id}_0.htm" title="${product.productName}"><img alt="${product.productName}" src="${cxt}${product.productImageUrl}" style="position: relative; width: 442.073170731707px; height: 290px; top: 0px; left: -76.0365853658537px;" class="nailthumb-image"></a></div>
       <p><a href="${cxt}productdetail/${product.id}_0.htm">${product.productDesc}</a></p>
       
     </li>
@@ -45,7 +45,11 @@
 
 <!-- content end -->
 <!-- footer -->
+<#if isEnglist == true>
+<#include "../include/footer_en.ftl">
+<#else>
 <#include "../include/footer.ftl">
+</#if>
 <!-- footer end -->
 </body>
 </html>

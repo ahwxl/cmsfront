@@ -28,7 +28,7 @@ public class ContentJdbcDaoImpl implements ContentJdbcDao{
 	/**
 	 * 获取文字列表
 	 */
-	String queryContentListSql ="select a.id,a.cnt_caption,a.operate_date  from fm_content a where a.catalog_id = ? ";
+	String queryContentListSql ="select a.id,a.cnt_caption,a.operate_date  from fm_content a where a.is_delete_flag ='0' and a.catalog_id = ? ";
 	
 	
 	@Override

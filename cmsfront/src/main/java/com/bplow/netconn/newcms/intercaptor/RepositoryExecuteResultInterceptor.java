@@ -31,11 +31,13 @@ public class RepositoryExecuteResultInterceptor implements MethodInterceptor, Se
 			resultObj = mothodInvocation.proceed();
 		}catch(EmptyResultDataAccessException e){
 			haddleExcaption(resultObj ,e);
+			e.printStackTrace();
 			log.info("处理异常:{}",e);
 			return resultObj;
 		}
 		catch (Exception e) {
 			haddleExcaption(resultObj ,e);
+			e.printStackTrace();
 			log.info("处理异常:{}",e);
 			return resultObj;
 		}finally{

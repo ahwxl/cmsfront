@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -53,7 +54,7 @@ public class CmsServiceImpl implements CmsService{
 		
 		for(FmCatalog fcatalog : list){
 			if(catalogId.equals(fcatalog.getParentCatalogId())){
-				fcatalog.setChildrenNode(new HashSet());
+				fcatalog.setChildrenNode(new TreeSet());
 				firstLayerCatalogList.add(fcatalog);
 				map.put(fcatalog.getCatalogId(), fcatalog);
 			}

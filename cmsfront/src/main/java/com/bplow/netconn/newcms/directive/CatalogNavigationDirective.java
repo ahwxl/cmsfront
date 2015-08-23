@@ -3,8 +3,11 @@ package com.bplow.netconn.newcms.directive;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +48,6 @@ public class CatalogNavigationDirective implements TemplateDirectiveModel{
 		List<FmCatalog> list = cmsService.queryAllCatalogByP(catalog.getParentCatalogId());
 		//Object[] array = list.toArray();
 		Collections.sort(list, new OrderComparator());
-		//Arrays.so
 		env.setVariable("cataloglist", ObjectWrapper.DEFAULT_WRAPPER.wrap(list));
 		body.render(env.getOut());
 		logger.info("展示产品列表标签:{0}",catalog.getParentCatalogId());

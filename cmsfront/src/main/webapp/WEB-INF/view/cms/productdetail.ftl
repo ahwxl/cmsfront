@@ -9,7 +9,7 @@
 
 <div id="content" class="">
   <p>&nbsp;</p>
-  <div id="trace"><a href="index-2.html">Home</a> &gt; <a href="#">Products</a> &gt; <a href="productList0d87.html?no=8"></a></div>
+  <!--<div id="trace"><a href="index-2.html">Home</a> &gt; <a href="#">Products</a> &gt; <a href="productList0d87.html?no=8"></a></div>-->
   <p>&nbsp;</p>
 <@product_detail catalogId = catalogId>
   <h1>${product.productName}</h1>
@@ -27,7 +27,11 @@ ${pagecontent}
 
 <!-- content end -->
 <!-- footer -->
+<#if isEnglist == true>
+<#include "../include/footer_en.ftl">
+<#else>
 <#include "../include/footer.ftl">
+</#if>
 <!-- footer end -->
 </body>
 </html>

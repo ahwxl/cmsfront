@@ -8,7 +8,7 @@
 <!-- content -->
 
 <div id="content">
-  <div id="trace"><a href="index-2.html">Home</a> &gt; News &gt; Latest News</div>
+<!--<div id="trace"><a href="index-2.html">Home</a> &gt; News &gt; Latest News</div>-->
   <p>&nbsp;</p>
   <h1>News</h1>
   <p>&nbsp;</p>
@@ -33,7 +33,11 @@
 
 <!-- content end -->
 <!-- footer -->
+<#if isEnglist == true>
+<#include "../include/footer_en.ftl">
+<#else>
 <#include "../include/footer.ftl">
+</#if>
 <!-- footer end -->
 </body>
 </html>
