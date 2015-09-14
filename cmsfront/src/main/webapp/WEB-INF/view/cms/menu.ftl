@@ -1,7 +1,12 @@
 <div id="menu">
   <ul>
-    <li class="selected"><a href="${cxt}mainScreen"><img src="${cxt}static/images/home.gif" align="absmiddle"></a></li>
-    
+    <li class="selected"><a href="${cxt}mainScreen"><img src="${cxt}static/images/home.gif" align="absmiddle">
+<#if isEnglist == true>
+home
+<#else>
+首页
+</#if>
+</a></li>
 <@catalog_list catalogId=webCatalogId>
 <#if cataloglist??>
 <#list cataloglist as navcatalog>

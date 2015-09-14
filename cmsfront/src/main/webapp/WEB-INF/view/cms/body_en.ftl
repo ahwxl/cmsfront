@@ -1,5 +1,5 @@
 <div id="contentIndex">
-<a href="#" onClick="_gaq.push(['worldwide office']);"><img src="static/images/banner/worldwide_longen.jpg"></a>
+<a href="/prodlist/5fa72bad764742b9adf97f1fd8b0b7f5.htm" onClick="_gaq.push(['worldwide office']);"><img src="static/images/banner/worldwide_longen.jpg"></a>
 <p>&nbsp;</p>
   <!-- left -->
   <div id="left">
@@ -13,7 +13,7 @@
 technology, located in Shanghai。
 			<p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="more" onclick="location='company.html'">
+            <input name="" type="button" class="btn" value="more" onclick="location='/contentlist/9fdcc06286f3428aa99f89f30af96542.htm'">
           </p>
         </dd>
       </dl>
@@ -38,7 +38,7 @@ technology, located in Shanghai。
    
           <p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="more" onclick="location='news.html'">
+            <input name="" type="button" class="btn" value="more" onclick="location='/prodlist/5fa72bad764742b9adf97f1fd8b0b7f5.htm'">
           </p>
         </dd>
       </dl>
@@ -60,7 +60,7 @@ technology, located in Shanghai。
          </ul>
           <p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="more" onclick="location='newsExpo.html'">
+            <input name="" type="button" class="btn" value="more" onclick="location='/contentlist/b7b160d0dc774e1799508ccec3452823.htm'">
           </p>
         </dd>
       </dl>

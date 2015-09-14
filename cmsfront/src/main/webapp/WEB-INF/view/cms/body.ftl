@@ -1,5 +1,5 @@
 <div id="contentIndex">
-<a href="#" onClick="_gaq.push(['worldwide office']);"><img src="static/images/banner/worldwide_long1.jpg"></a>
+<a href="/prodlist/a7ac10de485b451ca2de34ec179750fe.htm" onClick="_gaq.push(['worldwide office']);"><img src="static/images/banner/worldwide_long1.jpg"></a>
 <p>&nbsp;</p>
   <!-- left -->
   <div id="left">
@@ -12,7 +12,7 @@
           <span class="bold">上海上威塑料机械有限公司</span>专注于微孔塑料发泡技术和高品质膜/片材挤出技术，公司位于上海。
 			<p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="更多" onclick="location='company.html'">
+            <input name="" type="button" class="btn" value="更多" onclick="location='/contentlist/7f900fa75da74073a916706586c5ba4e.htm'">
           </p>
         </dd>
       </dl>
@@ -37,7 +37,7 @@
    
           <p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="更多" onclick="location='news.html'">
+            <input name="" type="button" class="btn" value="更多" onclick="location='/prodlist/a7ac10de485b451ca2de34ec179750fe.htm'">
           </p>
         </dd>
       </dl>
@@ -59,7 +59,7 @@
          </ul>
           <p>&nbsp;</p>
           <p class="align_r">
-            <input name="" type="button" class="btn" value="更多" onclick="location='newsExpo.html'">
+            <input name="" type="button" class="btn" value="更多" onclick="location='/contentlist/53a5ec5c5a7249229db131d9e19d1d4b.htm'">
           </p>
         </dd>
       </dl>

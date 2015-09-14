@@ -22,6 +22,7 @@ public class RequestStatisIntercaptor extends HandlerInterceptorAdapter{
 		//log.info("用户权限判读：@AccessRequired");
 		//获取请求的URL判读是否是 en.techwellglobal.com 如果是则展示英文站点
 		StringBuffer url = request.getRequestURL();
+		log.info("当前域名[{},{}]",url.toString(),request.getHeader("Host"));
 		url.delete(0, 6);//删除http://
 		String tempContextUrl = url.delete(url.length() - request.getRequestURI().length(), url.length()).toString();
 		if(tempContextUrl.contains("en.")){//展示英文站点

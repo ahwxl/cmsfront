@@ -7,13 +7,14 @@
 <!-- banner -->
 <div id="banner">
   <ul class="slides_container">
-    <li><a href="#" id=HBA><img src="static/images/banner/home_roll_1.jpg" width="960" height="400" title="HBA Series"></a></li>
+    <li><a href="#" id=HBA><img src="static/images/banner/home_roll_6.jpg" width="960" height="400" title="HBA Series"></a></li>
     <li><a href="#" id=HBA><img src="static/images/banner/home_roll_2.jpg" width="960" height="400" title="HBA Series"></a></li>
 	<li><a href="#" id=HBA><img src="static/images/banner/home_roll_3.jpg" width="960" height="400" title="HBA Series"></a></li>
 	<li><a href="#" id=HBA><img src="static/images/banner/home_roll_4.jpg" width="960" height="400" title="HBA Series"></a></li>
     <li><a href="#" id=HBA><img src="static/images/banner/home_roll_5.jpg" width="960" height="400" title="HBA Series"></a></li>
   </ul>
   <a href="#" class="prev"></a> <a href="#" class="next"></a>
+
 </div>
 <!-- banner end -->
 <p>&nbsp;</p>
@@ -35,7 +36,7 @@
 </body>
 </html>
 <script>
-var rand_no = Math.floor(Math.random()*2+1);//避免零
+var rand_no = Math.floor(Math.random()*6+1);//避免零
 $(function(){
 	$('#banner').slides({
 		start:rand_no, //隨機開始
