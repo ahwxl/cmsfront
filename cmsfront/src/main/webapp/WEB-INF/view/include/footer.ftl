@@ -5,3 +5,27 @@
   </p>
 </div>
 </div>
+
+<script>
+var rand_no = Math.floor(Math.random()*6+1);//避免零
+$(function(){
+        $('#banner').slides({
+                start:rand_no, //隨機開始
+                preload: true,
+                preloadImage:'static/images/loading.gif',
+                play: 4000,
+                pause: 1000,
+                hoverPause: true,
+                generatePagination: true
+        });
+});
+
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?563747a774f64feffd216a8e5d40d8d9";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
