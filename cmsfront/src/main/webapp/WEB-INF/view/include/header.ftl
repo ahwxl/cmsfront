@@ -6,7 +6,6 @@
 <title></title>
 <meta name="description" content="Shanghai Techwell Machinery Co.，Ltd">
 <meta name="keywords" content="上海上威,Techwell Machinery, PE, PP, GPPS, PET, XPE, IXPE, IXPP ">
-<link rel="shortcut icon" href="${cxt}static/images/favicon.ico">
 <link rel="stylesheet"  href="${cxt}static/css/main.css" type="text/css">
 <link rel="stylesheet"  href="${cxt}static/css/banner.css"  type="text/css">
 <script type="text/javascript" src="${cxt}static/js/jquery-1.8.2.min.js"></script>
