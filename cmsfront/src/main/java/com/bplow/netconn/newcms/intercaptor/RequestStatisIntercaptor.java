@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.method.HandlerMethod;
@@ -21,6 +22,9 @@ public class RequestStatisIntercaptor extends HandlerInterceptorAdapter{
             HttpServletResponse response, Object handler) throws Exception {
 		//log.info("用户权限判读：@AccessRequired");
 		//获取请求的URL判读是否是 en.techwellglobal.com 如果是则展示英文站点
+		
+		String startCatalogId = request.getServletContext().getInitParameter("catalogId");
+		
 		StringBuffer url = request.getRequestURL();
 		log.info("当前域名[{},{}]",url.toString(),request.getHeader("Host"));
 		url.delete(0, 6);//删除http://
@@ -31,6 +35,10 @@ public class RequestStatisIntercaptor extends HandlerInterceptorAdapter{
 		}else{//展示中文站点
 			request.setAttribute("isEnglist", false);
 			request.setAttribute("webCatalogId", "44209a93d0ca46e7b2643cfceb6c9e5e");
+		}
+		
+		if(StringUtils.isNotEmpty(startCatalogId)){
+			request.setAttribute("webCatalogId", startCatalogId);
 		}
 		
 		if(handler instanceof ResourceHttpRequestHandler){

@@ -31,7 +31,7 @@ public class NewCmsControler {
 	public String mainScreen(){
 		
 		
-		return "cms/mainScreen";
+		return "dc_cms/mainScreen";
 	}
 	
 	

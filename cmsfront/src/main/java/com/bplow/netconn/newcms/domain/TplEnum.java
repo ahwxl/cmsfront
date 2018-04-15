@@ -2,7 +2,7 @@ package com.bplow.netconn.newcms.domain;
 
 public enum TplEnum {
 	
-	CATALOG("catalog","cms/contentlist"),CONTENT("content","cms/contentpage");
+	CATALOG("catalog","dc_cms/contentlist"),CONTENT("content","dc_cms/contentpage");
 	
 	private String name;
 	
