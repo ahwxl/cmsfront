@@ -87,7 +87,7 @@ public class NewCmsControler {
 		
 		model.put("id", contentId);
 		
-		return "cms/contentpage";
+		return "dc_cms/contentpage";
 	}
 
 }
