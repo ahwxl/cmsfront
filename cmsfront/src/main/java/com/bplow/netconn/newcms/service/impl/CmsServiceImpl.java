@@ -92,8 +92,8 @@ public class CmsServiceImpl implements CmsService{
 
 	@Override
 	public FmCatalog getCatalogById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		FmCatalog catalog = catalogDao.queryCatalogById(id);
+		return catalog;
 	}
 
 	@Override

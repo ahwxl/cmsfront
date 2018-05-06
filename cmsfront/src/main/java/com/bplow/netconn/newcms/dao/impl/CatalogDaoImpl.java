@@ -18,6 +18,8 @@ public class CatalogDaoImpl implements CatalogDao{
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
+	String queryCatalogByIdSQL = "select * from fm_catalog a where a.catalog_id=? ";
+	
 	String catalogListsql="select a.catalog_id,a.catalog_name,a.order_id,a.parent_catalog_id,b.catalog_id p_catalog_id,b.catalog_name p_catalog_name,b.parent_catalog_id pp_catalog_id,b.order_id p_order_id from fm_catalog a "+
     "right join "+
     "(select bb.catalog_id,bb.catalog_name,bb.order_id from fm_catalog bb where bb.parent_catalog_id= ? )b on a.parent_catalog_id= b.catalog_id ";
@@ -32,8 +34,17 @@ public class CatalogDaoImpl implements CatalogDao{
 	@Override
 	public FmCatalog queryCatalogById(String id) {
 		
-		
-		return null;
+		return jdbcTemplate.queryForObject(queryCatalogByIdSQL, new RowMapper<FmCatalog>() {
+            public FmCatalog mapRow(ResultSet rs, int rowNum) throws SQLException {
+            	FmCatalog cnt = new FmCatalog();
+            	cnt.setCatalogId(rs.getString("catalog_id"));
+            	cnt.setCatalogName(rs.getString("catalog_name"));
+            	cnt.setOrderId(rs.getInt("order_id"));
+            	cnt.setParentCatalogId(rs.getString("parent_catalog_id"));
+            	cnt.setCatalogType(rs.getString("catalog_type"));
+                return cnt;
+            }
+        },id);
 	}
 
 	@Override

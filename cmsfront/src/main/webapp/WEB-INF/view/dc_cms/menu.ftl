@@ -4,11 +4,33 @@
 <#if cataloglist??>
 <#list cataloglist as navcatalog>
 <#if navcatalog.catalogType = "1">
-<li class="m"><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
-<#elseif navcatalog.catalogType = "2">
-<li class="m"><a href="${cxt}contentlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
+<li 
+<#if Request["currentCatalog"]?exists>
+<#if Request["currentCatalog"]=navcatalog.catalogId>
+class="m on"
 <#else>
-<li class="m"><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
+class="m"
+</#if>
+</#if>
+><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
+<#elseif navcatalog.catalogType = "2">
+<li 
+<#if Request["currentCatalog"]?exists>
+<#if Request["currentCatalog"]=navcatalog.catalogId>
+class="m on"
+<#else>
+class="m"
+</#if></#if>
+><a href="${cxt}contentlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
+<#else>
+<li 
+<#if Request["currentCatalog"]?exists>
+<#if Request["currentCatalog"]=navcatalog.catalogId>
+class="m on"
+<#else>
+class="m"
+</#if></#if>
+><a href="${cxt}prodlist/${navcatalog.catalogId}.htm">${navcatalog.catalogName}</a>
 </#if>
 
 </#list>
