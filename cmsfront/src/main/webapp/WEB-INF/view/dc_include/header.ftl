@@ -12,11 +12,7 @@
 <meta content="镇江致远知识产权有限公司" name="description">
 <link href="${cxt}resources/upfile/files/favicon.ico" type="image/x-icon" rel="icon">
 <link href="${cxt}resources/upfile/files/favicon.ico" type="image/x-icon" rel="shortcut icon">
-<link type="text/css" rel="stylesheet" href="${cxt}resources/manager/css/common.css">
 <link type="text/css" rel="stylesheet" href="${cxt}resources/manager/css/style.css">
-<link type="text/css" rel="stylesheet" href="${cxt}resources/manager/css/upDateStyle.css">
-<link type="text/css" rel="stylesheet" href="${cxt}resources/manager/css/coupon/coupon.css">
-<link type="text/css" rel="stylesheet" href="${cxt}resources/manager/css/animate.min.css">
 <script type="text/javascript" src="${cxt}resources/manager/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="${cxt}resources/manager/js/md5.js"></script>
 <script type="text/javascript" src="${cxt}resources/manager/js/updateStyle.js"></script>
@@ -39,9 +35,8 @@ html {overflow-x:hidden; overflow-y:auto;} /*用来隐藏html的滚动条*/
 .fwtop {background: none repeat scroll 0 0;}.fwbottom {background:  none repeat scroll 0 0;}
 </style>
 
-
 </head>
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+<body>
 
 <div id="BNreturnTopDiv"></div>
 <div class="fwtop" style="position:relative;height:642px;width:100%;min-height:30px;" rel="5">
@@ -174,7 +169,7 @@ $(".slide52 .hd").css({"marginLeft":"-"+half_hd_length+"px"});
 .gd a:hover{ padding:15px 50px; border:1px solid #1CB9C8; background:#1CB9C8;}
 </style>
 <div class="gd">
-	<a href="/559">在线预约</a> <a href="/560">联系我们</a> 
+	<a href="#">在线预约</a> <a href="#">联系我们</a> 
 </div></div>
 </div>
 

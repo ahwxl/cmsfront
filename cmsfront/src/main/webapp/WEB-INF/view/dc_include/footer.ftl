@@ -1,4 +1,4 @@
-<div class="fwbottom" style="position:relative;height:150px;width:100%;min-height:30px;" rel="6">
+<div class="fwbottom" style="position:absolute;text-align: left;height:150px;width:100%;min-height:30px;">
  <div class="edit_putHere  tLan" rel="97" id="97" savetitle="area97" style="height: 147px; z-index: auto; top: 3px; position: absolute; background-color: rgb(20, 20, 20); left: -31.5px; width: 1263px;">
  <div class="label advertising" id="98" rel="98" titles="文字" usestate="1" style="width:853px;height:80px;z-index:100;left:50%;top:58px;position:absolute;margin-left:-426.5px;" objcenter="center">
  <div class="label_content advContent text98">
