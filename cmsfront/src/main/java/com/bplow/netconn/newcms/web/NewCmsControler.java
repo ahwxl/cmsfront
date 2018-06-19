@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.bplow.netconn.newcms.domain.FmCatalog;
 import com.bplow.netconn.newcms.domain.TplDecisionDomain;
+import com.bplow.netconn.newcms.service.CmsService;
 import com.bplow.netconn.newcms.service.TplDecisionService;
 
 
@@ -24,6 +26,9 @@ public class NewCmsControler {
 	
 	@Autowired
 	private TplDecisionService tplDecisionService;
+	
+	@Autowired
+	private CmsService cmsService;
 	
 	
 	
@@ -66,6 +71,12 @@ public class NewCmsControler {
 		log.info("请求参数是：{}", catalogId);
 		String tplpath = null;
 		
+		request.setAttribute("currentCatalog", catalogId);
+		
+		FmCatalog fmCatalog = cmsService.getCatalogById(catalogId);
+		if(null != fmCatalog){
+			request.setAttribute("currentCatalogName", fmCatalog.getCatalogName());
+		}
 		
 		TplDecisionDomain tpl = tplDecisionService.processCatalog(catalogId);
 		tplpath = tpl.getTplEnum().getTmlPath();
@@ -87,7 +98,7 @@ public class NewCmsControler {
 		
 		model.put("id", contentId);
 		
-		return "dc_cms/contentpage";
+		return "dc_cms/article_detail";
 	}
 
 }

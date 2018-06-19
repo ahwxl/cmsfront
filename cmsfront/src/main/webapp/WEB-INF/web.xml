@@ -12,7 +12,7 @@
 
 	<context-param>
 		<param-name>catalogId</param-name>
-		<param-value>4660efe778d3464c9adf3f29f5253985</param-value>
+		<param-value>6ab7354c7683443ba9df972fb56ccc5c</param-value>
 	</context-param>
 
 	<listener>
